@@ -3,6 +3,9 @@
 This Simproject is based on SIMPLEisBETTERthanCOMPLEX
 written by Vitor Freitas
 
+![Python application](https://github.com/jlplautz/simproject/workflows/Python%20application/badge.svg)
+
+
 ### 1- Initial commands
 - PycharmProjects $ mkdir simproject
 - simproject $ virtualenv .venv -p python3.8
