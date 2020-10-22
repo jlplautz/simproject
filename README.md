@@ -103,4 +103,3 @@ boards.models.Board.DoesNotExist: Board matching query does not exist.
 <Board: Django>
 ```
 ![](static/images/Model_Operations.png)
-
