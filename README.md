@@ -64,6 +64,7 @@ COMMIT;
 ```
 
 (.venv) simproject $ python manage.py migrate
+
 (.venv) simproject $ python shell
 
 ```
@@ -106,3 +107,36 @@ boards.models.Board.DoesNotExist: Board matching query does not exist.
 <Board: Django>
 ```
 ![](static/images/Model_Operations.png)
+
+
+### 5- Views, templates and Static Files
+   - file settings.py
+      - 'DIRS': [os.path.join(BASE_DIR, 'templates')],
+```
+>>> from django.conf import settings
+>>> settings.BASE_DIR
+PosixPath('/home/plautz/PycharmProjects/simproject')
+>>> import os
+>>> os.path.join(settings.BASE_DIR, 'templates')
+'/home/plautz/PycharmProjects/simproject/templates'
+```  
+  - views.py
+```
+def home(request):
+    boards = Board.objects.all()
+    return render(request, 'home.html', {'boards': boards})
+```
+
+  - home.html page
+![](static/images/home_page.png)
+    
+  - boards/tests.py
+```
+class HomeTests(TestCase):
+    def test_home_view_status_code(self):
+        url = reverse('home')
+        response = self.client.get(url)
+        self.assertEquals(response.status_code, 200)
+```
+  - mng test -> -v {0,1,2,3}, --verbosity {0,1,2,3}
+     - Verbosity level; 0=minimal output, 1=normal output, 2=verbose output, 3=very verbose output
