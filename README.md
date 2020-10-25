@@ -140,3 +140,4 @@ class HomeTests(TestCase):
 ```
   - mng test -> -v {0,1,2,3}, --verbosity {0,1,2,3}
      - Verbosity level; 0=minimal output, 1=normal output, 2=verbose output, 3=very verbose output
+
