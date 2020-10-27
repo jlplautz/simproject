@@ -132,12 +132,24 @@ def home(request):
     
   - boards/tests.py
 ```
-class HomeTests(TestCase):
-    def test_home_view_status_code(self):
-        url = reverse('home')
-        response = self.client.get(url)
-        self.assertEquals(response.status_code, 200)
+import pytest
+from django.urls import reverse, resolve
+from .views import home
+
+@pytest.mark.django_db
+def test_home_view_status_code(client):
+    url = reverse('home')
+    response = client.get(url)
+    assert response.status_code, 200
+def test_home_url_resolves_home_view():
+    view = resolve('/')
+    assert view.func, home
 ```
   - mng test -> -v {0,1,2,3}, --verbosity {0,1,2,3}
      - Verbosity level; 0=minimal output, 1=normal output, 2=verbose output, 3=very verbose output
 
+### 6- Created file pytest.ini in the project root
+```
+[pytest]
+DJANGO_SETTINGS_MODULE = myproject.settings
+```
