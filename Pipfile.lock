@@ -99,11 +99,10 @@
         },
         "faker": {
             "hashes": [
-                "sha256:74b32991f8e08e4f2f84858b919eca253becfaec4b3fa5fcff7fdbd70d5d78b1",
-                "sha256:c2ce42dd8361e6d392276006d757532562463c8642b1086709584200b7fd7758"
+                "sha256:2dd0e22bb97453fe1d3af2d785d8b45aa9e46018bacc7ba03ce5e2d86543c3a5",
+                "sha256:f94866bced86e8c0fe257e411b62476ffdeb3190ff3df6017ff37f858117a787"
             ],
-            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
-            "version": "==0.9.1"
+            "version": "==4.14.1"
         },
         "flake8": {
             "hashes": [
