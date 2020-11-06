@@ -23,7 +23,10 @@
         {% for board in boards %}
             <tr>
                 <td>
-                    {{ board.name }}
+{#                 Always use the {% url %} template tag to compose the applications URLs.#}
+{#                  The first parameter is the name of the URL (defined in the URLconf,#}
+{#                  i.e., the urls.py), then you can pass an arbitrary number of arguments as needed.#}
+                    <a href="{% url 'board_topics' board.pk %}">{{ board.name }}</a>
                     <small class="text-muted d-block">{{ board.description }}</small>
                 </td>
                 <td class="align-middle">0</td>

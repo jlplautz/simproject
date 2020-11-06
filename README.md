@@ -153,3 +153,23 @@ def test_home_url_resolves_home_view():
 [pytest]
 DJANGO_SETTINGS_MODULE = myproject.settings
 ```
+
+### 7- List all Topics that belongs to Boards
+   - Now we can navegate from Board to topics
+```  <tbody>
+        {% for board in boards %}
+            <tr>
+                <td>
+{#                 Always use the {% url %} template tag to compose the applications URLs.#}
+{#                  The first parameter is the name of the URL (defined in the URLconf,#}
+{#                  i.e., the urls.py), then you can pass an arbitrary number of arguments as needed.#}
+                    <a href="{% url 'board_topics' board.pk %}">{{ board.name }}</a>
+                    <small class="text-muted d-block">{{ board.description }}</small>
+```
+   - Now we can navegate from Topics to Board
+```
+<div class="container">
+    <ol class="breadcrumb my-4">
+        <li class="breadcrumb-item"><a href="{% url 'home' %}">Boards</a></li>
+        <li class="breadcrumb-item active">{{ board.name }}</li>
+```
