@@ -224,11 +224,10 @@
         },
         "mixer": {
             "hashes": [
-                "sha256:3601e84134b79cd4ac663f79a39fc3005d6a3f37692e7062cc3c0a727ab79940",
-                "sha256:f1ccab542a1304d7b3da5d6ebe9f53de1aac2288427121a3a54a63e08c3a5367"
+                "sha256:0703ee287be52a67c0aac2ebafd85a68d8e1f2e18d59e2cfb96071f071e0bf3c",
+                "sha256:2c1c867237e2af3b72b5730685c3d930473f717006739aed478aba8c4d22ce08"
             ],
-            "index": "pypi",
-            "version": "==6.1.3"
+            "version": "==7.0.1"
         },
         "packaging": {
             "hashes": [
