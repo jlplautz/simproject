@@ -147,7 +147,7 @@
         },
         "coverage": {
             "hashes": [],
-            "version": "==6.5.0"
+            "version": "==7.2.3"
         },
         "faker": {
             "hashes": [],
