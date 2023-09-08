@@ -151,7 +151,7 @@
         },
         "faker": {
             "hashes": [],
-            "version": "==15.3.4"
+            "version": "==19.5.0"
         },
         "flake8": {
             "hashes": [
